@@ -1,0 +1,60 @@
+<html>
+    <head>
+        <title>LeftOvers.com</title>
+    </head>
+    <link rel="stylesheet" href="signup.css">
+    <body  style="background-color:rgb(53,55,64);">
+        <div class="topnav" style="color: white; background-color: rgb(32,33,35);border-radius: 20px;height: 60px;">
+            <a href="index.html"style="padding-top: 15px;">Home</a>
+            <!-- <a href="services.html">Services</a> -->
+            <a href="contact.html"style="padding-top: 15px;">Contact</a>
+            <a href="login.html"style="padding-top: 15px;">Login</a>
+            <a href="#"style="padding-top: 15px;">Sign Up</a>
+        </div>
+        <br>
+        <form class= "signup" action="" method="get" >
+            <div style="color: black;font-family: sans-serif;text-decoration: underline;text-align: center;"><h1>Sign Up</h1></div>
+            
+            <div class="formGroup">
+                <input type="text" placeholder="Name" name="" required autocomplete="off">
+              </div>
+              
+            <div class="formGroup">
+              <input type="email" placeholder="Email ID" name="email" required autocomplete="off">
+            </div>
+            <div class="formGroup">
+              <input type="password" id="ida" onkeyup="check();" placeholder="Create Password" required autocomplete="off">
+             
+            </div>
+            
+            <div class="formGroup">
+                <input type="password" id="idb" onkeyup="check();" placeholder="Confirm Password" required autocomplete="off">
+               
+              </div>
+              
+              <p id='alert' style="font-family:consolas;color:red;text-align:center;margin: 0px;"></p>
+              
+            <br>
+            <div class="formGroup">
+              <a href="dashboard.html"><button type="button" class="btn2">Sign Up</button>
+              </a>
+            </div>
+            <br>
+            <div style="text-align: center;color: black;font-family: consolas;font-size: 20px;">Already a user? <a href="login.html" style="color: black;">Login</a></div>
+     
+          </form>
+    </body>
+
+    <script>
+
+        var check = function() {
+            if (document.getElementById('ida').value ==
+              document.getElementById('idb').value) {
+              document.getElementById('alert').innerHTML = '';
+            } else {
+              document.getElementById('alert').innerHTML = ' Passwords donot match!';
+            }
+          }
+    
+    </script>
+</html>
